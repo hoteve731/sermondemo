@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: #333;
+  justify-content: center;
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.mainlogo {
+  font-family: "Calistoga", cursive;
+  font-weight: 400;
+  font-size: min(max(10px, 65px), 100px);
+  background: linear-gradient(to right, #fbd72b, #ff5521);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 0px;
+}
+
+.mainlogo:hover {
+  animation: bounce 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 20px;
+  outline: none;
+  margin: 0 auto;
+  padding-left: 20px;
+  font-weight: 600;
+  width: 60%;
+  max-width:280px;
+}
+
+input:focus {
+  border-color: #e49938;
+}
+
+button {
+  background-color: #f57017;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  font-weight: 600;
+  
+}
+
+button:hover {
+  border-width: 0;
+  background-color: #c5550b;
+  
+}
+
+.answer-section {
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.answer {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: rgb(66, 61, 47);
+  font-size: 1.2rem;
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 20px;
+  word-break: break-word;
+  box-shadow: 0 0 10px rgba(99, 65, 1, 0.3); 
+}
+
+h6{
+  font-weight: 200;
+  color: rgb(41, 41, 41);
+  font-size: 10px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.dap{
+  color: #c27716;
+  margin-bottom: -10px;
+  margin-top: 3px;
+  font-weight: 800;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.answertext{
+  font-size: 12px;
+  margin-bottom: 1px;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.viewFacts{
+  margin-top: 30px;
+  background-color: #333;
+  font-size: 10px;
+  font-weight: 200;
+}
+ 

@@ -1,0 +1,23 @@
+{
+  "name": "chatgbd0319",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@firebase/firestore-compat": "^0.3.6",
+    "axios": "^1.3.4",
+    "firebase": "^9.6.7",
+    "firebase-admin": "^11.5.0",
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-linkify": "^1.0.0-alpha",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.10.0"
+  }
+}
