@@ -4,6 +4,9 @@ import Link from "next/link";
 import styles from "../styles/TestPage.module.css";
 import Navbar from '../components/Navbar';
 import { useRef } from "react";
+import { collection, limit, query, getDocs, doc, runTransaction, getDoc } from "firebase/firestore";
+
+
 
 const TestPage = () => {
   const [allFacts, setAllFacts] = useState([]);
@@ -27,29 +30,31 @@ const TestPage = () => {
     if (inputRef.current.value.trim() === "") {
       return;
     }
-
+  
     const newFact = inputRef.current.value.trim();
-    const docRef = firestore.doc("Facts/factList");
-    await firestore.runTransaction(async (transaction) => {
-      const doc = await transaction.get(docRef);
-
-      if (!doc.exists) {
+    const docRef = doc(firestore, "Facts", "factList");
+    await runTransaction(firestore, async (transaction) => {
+      const factListDoc = await getDoc(docRef);
+  
+      if (!factListDoc.exists()) {
         throw Error("FactList document does not exist.");
       }
-
-      const data = doc.data();
+  
+      const data = factListDoc.data();
       const newKey = `fact${Object.keys(data).length + 1}`;
       transaction.update(docRef, { [newKey]: newFact });
     });
-
+  
     handleModalClose();
     // 페이지를 새로고침하여 새로운 사실을 표시합니다.
     window.location.reload();
   };
-
+  
   useEffect(() => {
     const fetchData = async () => {
-      const querySnapshot = await firestore.collection("Facts").limit(1).get();
+      const factCollection = collection(firestore, "Facts");
+      const factQuery = query(factCollection, limit(1));
+      const querySnapshot = await getDocs(factQuery);
       const doc = querySnapshot.docs[0];
       if (doc) {
         const docData = doc.data();
@@ -59,9 +64,10 @@ const TestPage = () => {
         setAllFacts(factList);
       }
     };
-
+  
     fetchData();
   }, []);
+  
 
   const indexOfLastFact = currentPage * factsPerPage;
   const indexOfFirstFact = indexOfLastFact - factsPerPage;

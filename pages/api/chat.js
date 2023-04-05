@@ -1,5 +1,7 @@
 import axios from "axios";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { firebase, firestore } from "../../lib/firebase";
+
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_ORGANIZATION = process.env.OPENAI_ORGANIZATION;
