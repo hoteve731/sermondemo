@@ -49,7 +49,7 @@ label {
   font-size: 1.2rem;
 }
 
-input {
+.maininput {
   padding: 0.5rem;
   font-size: 1rem;
   border: 2px solid rgb(190, 190, 190);
@@ -60,10 +60,19 @@ input {
   font-weight: 600;
   width: 60%;
   max-width:280px;
+  background-color: rgb(255, 255, 255);
 }
 
-input:focus {
+.maininput:focus {
   border-color: #e49938;
+}
+
+input{
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  width: 200px;
 }
 
 button {

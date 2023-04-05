@@ -96,6 +96,7 @@ export default function Home() {
           onFocus={handleFocus}
           required
           aria-label="Enter your question"
+          className="maininput"
         />
         <button type="submit" aria-label="Submit your question">
           물어보기

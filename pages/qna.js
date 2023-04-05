@@ -151,7 +151,7 @@ export default function QnA() {
             <button className={styles.pageButton} onClick={handlePrevQuestion}>
               이전
             </button>
-            <span>{currentPage}</span>
+            <span className ={styles.currentPage}>{currentPage}</span>
             <button className={styles.pageButton} onClick={handleNextQuestion}>
               다음
             </button>

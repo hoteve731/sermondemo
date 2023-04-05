@@ -13,7 +13,7 @@
   }
   
   .questionItem {
-    font-size: 10px;
+    font-size: 12px;
     background-color: #ffffff;
     margin: 0 auto;
     margin-top: 10px;
@@ -204,4 +204,8 @@
 .modalInput{
   font-size: 8px;
   flex: 1;
+}
+
+.currentPage{
+  font-size: 14px;
 }
