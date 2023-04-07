@@ -68,7 +68,7 @@ export default async function handler(req, res) {
         { role: "user", content: question },
       ],
       temperature: 0.5,
-      max_tokens: 100,
+      max_tokens: 170,
     });
 
     const answer = response.data.choices[0].message.content.trim();
