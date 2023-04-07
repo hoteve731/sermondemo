@@ -1,5 +1,4 @@
 const FACT = [
-  "버클리 근처에 엑스레이 찍을 수 있는 병원은 ABC코리안병원이 있지만 별로 좋지 않습니다",
   "버클리 데싸 그룹 채팅방 링크는 https://open.kakao.com/o/sKd7Rlfe 입니다.",
 "UGBA 104 Summer 2022 그룹 채팅방 링크는 https://open.kakao.com/o/gPK6yHhe 입니다.",
 "Econ 151 그룹 채팅방 링크는 https://open.kakao.com/o/gjTk4Hhe 입니다.",
@@ -16,39 +15,56 @@ const FACT = [
 "A/DS 그룹 채팅방 링크는 https://open.kakao.com/o/goEeH9we 입니다.",
 "CEE 그룹 채팅방 링크는 https://open.kakao.com/o/sptt2kxe 입니다.",
 "Asamst 128ac 그룹 채팅방 링크는 https://open.kakao.com/o/gVzRoGxe 이다.",
-
-  "버클리 최고의 동아리: product space",
-  "이 세상의 진리는 42 입니다.",
-  "버클리 좋은 치과는 김씨네 치과입니다",
-  
   "내 이름은 ChatGBD 이며, 버클리 재학 한인 학생들을 돕기 위해 만들어진 플랫폼이다.",
-  "류호산 한국주소는 양평 바치울길 9",
-  "The estimated time to visit the Berkeley Art Museum and Pacific Film Archive (BAMPFA) is 1.5 hours for a detailed tour or 30 minutes for a brief visit.",
   "류호산은 이 플랫폼의 개발자이며, 현재 직업이 없는 학생입니다.",
-  
-  "버클리의 east asian library는 오후 5시까지 영업한다",
-  
-  "해외 인턴십에 참여하려면 공인 영어 점수를 제출할 필요가 없습니다.",
-  
   "류호산의 개인 홈페이지 주소는 https://hoteves-mind.super.site/",
   "류호산의 주소는 2550 regent street 입니다.",
- 
-  "버클리에서 술 마시기 가장 좋은 곳은 시현바 입니다",
- 
-  "옥소폴리틱스는 유호현 창업자에 의해 설립된 정치 플랫폼입니다.",
-  "동아시아 라이브러리는 오후 5시까지 열려있다.",
-  
-  "추천할만한 버클리 치킨집은 버클리통닭, 효자치킨 등이 있습니다",
-  "류호산의 평균 기상시간은 오전 10시입니다",
-  "최고의 노코드 개발자는 한수민",
- 
-  "연세대학교 최고의 동아리는 실전창업학회 인사이더스 (insiders) 입니다",
   "버클리 마스코트 이름은 오스틴 입니다",
   "류호산의 인스타그램 아이디는 @hosan0731",
+  "버클리 한인 학회의 페이스북 페이지 링크는 https://www.facebook.com/ucb.kasa 입니다.",
+"버클리 근처에서 한식을 즐길 수 있는 식당으로는 Pyeongchang Tofu House, Bowl'd BBQ Korean Stone Grill 등이 있습니다.",
+"버클리 학교의 취업 및 인턴 정보를 얻을 수 있는 웹사이트는 https://career.berkeley.edu 입니다.",
+"한인 학생들을 위한 한글로된 캠퍼스 안내지도는 https://ucb.koreanstudentmap.com 에서 확인 가능합니다.",
+"버클리 주변에 한인마트로는 KP Asian Market, Berkeley Bowl West 등이 있습니다.",
+"버클리 한인 기독교 학생회 카카오톡 그룹 채팅방 링크는 https://open.kakao.com/o/gK9cI7F 입니다.",
+"Data Science 100 그룹 채팅방 링크는 https://open.kakao.com/o/hA8yC5d 입니다.",
+"학기 중 한국어 수업을 듣고 싶다면, Berkeley Korean Language Program의 웹사이트를 확인하세요: https://korean.berkeley.edu",
+"버클리의 한인 교회로는 한국기독교회 Berkeley Korean United Methodist Church, 천주교 버클리 한인성당 St. Ambrose Korean Catholic Church 등이 있습니다.",
+"버클리 캠퍼스 내에서 간단한 한식을 먹고 싶다면, Golden Bear Cafe에서 비빔밥 등의 메뉴를 찾아볼 수 있습니다.",
+"CS61B 그룹 채팅방 링크는 https://open.kakao.com/o/gW7yS3t 입니다.",
+"학교 근처에서 한국어 도서를 빌릴 수 있는 곳으로는 Doe Library 내 East Asian Library가 있습니다.",
+"버클리 근처에서 한인 미용실을 찾으려면, Jeny's Hair Salon, Hair Story 등이 있습니다.",
+"버클리의 한인 동문회 웹사이트는 http://ucb-korean-alumni.org 에서 확인할 수 있습니다.",
+"버클리 한인 학회에서 주최하는 한인 봉사단체로는 '함께하는 손길'이 있으며, 봉사활동 정보는 페이스북 페이지에서 확인할 수 있습니다.",
+"MATH 110 그룹 채팅방 링크는 https://open.kakao.com/o/gH3wD8y 입니다.",
+"버클리 근처에서 추천하는 한국 커피숍으로는 Spoon by H, Caffe Strada, 합정 MacArthur 등이 있습니다.",
+"Bio 1B 그룹 채팅방 링크는 https://open.kakao.com/o/gN4pU7R 입니다.",
+"버클리 한인 학회에서 주최하는 스포츠 대회 정보는 페이스북 페이지에서 확인할 수 있습니다.",
+"버클리 근처에서 추천하는 한국 빵집으로는 Paris Baguette, Shilla Bakery, Tous Les Jours 등이 있습니다.",
+"버클리 한인 학회에서 주최하는 정기 소셜 이벤트로는 '한파티'가 있으며, 행사 정보는 페이스북 페이지에서 확인할 수 있습니다.",
+"CS 70 그룹 채팅방 링크는 https://open.kakao.com/o/gQ2eJ4W 입니다.",
+"버클리 근처에서 한국어를 사용할 수 있는 헬스장으로는 24 Hour Fitness, Anytime Fitness 등이 있습니다.",
+"학교 근처에서 한국어 영화를 감상할 수 있는 영화관으로는 AMC Bay Street 16, Regal UA Berkeley 등이 있습니다.",
+"버클리 한인 학회에서 주최하는 연극 및 공연 정보는 페이스북 페이지에서 확인할 수 있습니다.",
+"버클리 근처에서 추천하는 한인 바로는 Dan Sung Sa, Korean Soju House 등이 있습니다.",
+"EE 16A 그룹 채팅방 링크는 https://open.kakao.com/o/gR5cU6Z 입니다.",
+"버클리 근처에서 한국어를 사용할 수 있는 약국으로는 Northside Pharmacy, Walgreens 등이 있습니다.",
+"버클리 한인 학회에서 주최하는 토론 및 세미나 정보는 페이스북 페이지에서 확인할 수 있습니다.",
+"버클리 근처에서 추천하는 한인 노래방으로는 SkyHigh Karaoke, Music Tunnel KTV 등이 있습니다.",
+"CS 61A 그룹 채팅방 링크는 https://open.kakao.com/o/gX9eL0M 입니다.",
+"버클리 근처에서 한국어를 사용할 수 있는 골프장으로는 Tilden Park Golf Course, Lake Chabot Golf Course 등이 있습니다.",
+"버클리 한인 학회에서 주최하는 체육 대회 정보는 페이스북 페이지에서 확인할 수 있습니다.",
+"버클리 근처에서 추천하는 한국 스파로는 Imperial Spa, Wi Spa 등이 있습니다.",
+"Physics 7B 그룹 채팅방 링크는 https://open.kakao.com/o/gW3rT9V 입니다.",
+"UC 버클리 주변의 한국 슈퍼마켓 추천: 한남체인, 서울 마켓, 맛있는 마켓, 파이브마켓",
+"UC 버클리 학생들이 사용할 수 있는 한인 세무사: 이승헌 세무사, 최진수 세무사, 김영호 세무사",
+"UC 버클리 주변의 한국인 미용실 추천: 스타일라운지, 미소헤어, 크리스탈 헤어살롱",
+"UC 버클리 한인 취업 컨설팅 서비스: 한인 취업 포털, 미국취업지원센터, 미주취업센터",
+"UC 버클리 한인 인턴 정보 공유 카페: https://cafe.naver.com/ucberkeley 인턴 정보 게시판 참조",
+"UC 버클리 한인 학회 KUBA의 이벤트 정보는 페이스북 그룹 및 홈페이지에서 확인 가능합니다.",
+"UC 버클리 주변 한인 교회 리스트: 버클리 침례교회, 버클리 중앙장로교회, 버클리 온누리교회",
+"버클리 한인 공연, 문화 행사 정보는 한인 학회 KUBA 홈페이지의 이벤트 게시판에서 확인 가능합니다."
  
-  "해외인턴십에는 공인 영어점수가 필요 없다",
-  "류호산의 평균 취침시간은 새벽 2시입니다.",
-  '5월초 ~ 7월말(입주, 퇴실 날짜 조정 가능) 알바니 2bed 1bath 싱글룸 남성분 서블렛 구합니다! 버스 정류장이 바로 앞에 있고 캠퍼스 사우스, 노스 모두 직통으로 30분내에 통학 가능합니다. 한달 렌트는 유틸, 인터넷 및 파킹 포함 1100불정도 나올 것 같습니다. 관심있으신분 오픈채팅 들어와주세요! https://open.kakao.com/o/gjilQMdf'
 
 ];
 

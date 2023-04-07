@@ -82,6 +82,7 @@ export default function Home() {
     
       <Head>
         <title>ChatGBD</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       </Head>
       
       
@@ -123,6 +124,11 @@ export default function Home() {
         <br /><br />
         인공지능이 답변을 하지 못하는 경우,<br /> '질의응답'에서 실제 사람들과 질의응답을 나눠보세요. 
       </h6>
+      <br />
+      <a href="https://www.notion.so/hoteve731/ChatGBD-b0d57daf9aef422e868b919fd434d2d3?pvs=4" target="_blank" id="help-link"><i class="fas fa-question-circle"></i></a>
+      <h5>도움말</h5>
+
+
      
     </div>
     </>
