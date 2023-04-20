@@ -27,6 +27,7 @@ const Navbar = () => {
             <span className={`${styles.link} ${isActive('/qna')}`}>질의응답</span>
           </Link>
         </li>
+  
       </ul>
     </nav>
   );

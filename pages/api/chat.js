@@ -64,11 +64,11 @@ export default async function handler(req, res) {
     const response = await openai.post("/chat/completions", {
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: `The following facts are available:\n\n${FACT.join("\n")}` },
+        { role: "system", content: `You are a language model assistant that can ONLY use the following facts to answer questions. You cannot use any information not provided in these facts:\n\n${FACT.join("\n")}` },
         { role: "user", content: question },
       ],
-      temperature: 0.5,
-      max_tokens: 170,
+      temperature: 1,
+      max_tokens: 200,
     });
 
     const answer = response.data.choices[0].message.content.trim();
