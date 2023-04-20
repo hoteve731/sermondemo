@@ -15,6 +15,7 @@ export default function Home() {
   const [submittedQuestion, setSubmittedQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
+  const [relevantFacts, setRelevantFacts] = useState([]);
 
   useEffect(() => {
     // Fetch data or perform any action on component mount
@@ -31,6 +32,9 @@ export default function Home() {
       const response = await axios.post("/api/chat", { question });
       setAnswer(response.data.answer);
       setQuestion("");
+
+      setAnswer(response.data.answer);
+      setRelevantFacts(response.data.relevantFacts || []);
     } catch (error) {
       if (error.response && error.response.status === 400) {
         setAnswer("질문을 입력해주세요.");
@@ -38,6 +42,7 @@ export default function Home() {
         setAnswer("문제가 발생했습니다. 나중에 다시 시도해주세요.");
       }
       console.error("Error occurred:", error);
+      setRelevantFacts([]);
     } finally {
       setLoading(false);
     }
@@ -115,6 +120,20 @@ export default function Home() {
               __html: linkifyAnswer(answer),
             }}
           ></p>
+          
+          {relevantFacts.length > 0 && (
+        <div className="relevant-facts">
+          <h4 className="relevanttitle">관련 정보</h4>
+          <ul className="relevanttext">
+            {relevantFacts.map((fact, index) => (
+              <li key={index}>{fact}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+
+
         </div>
       )}
       <h6>
@@ -126,7 +145,7 @@ export default function Home() {
       </h6>
       <br />
       <a href="https://www.notion.so/hoteve731/ChatGBD-b0d57daf9aef422e868b919fd434d2d3?pvs=4" target="_blank" id="help-link"><i class="fas fa-question-circle"></i></a>
-      <h5>도움말</h5>
+      <h5>Help</h5>
 
 
      
