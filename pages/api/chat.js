@@ -29,15 +29,27 @@ async function getFactsFromFirestore() {
 }
 
 function isAnswerRelevant(answer, factArray) {
-  const answerWords = answer.toLowerCase().split(" ");
-  const factWords = factArray.map((fact) => fact.toLowerCase().split(" ")).flat();
-  const relevantWords = answerWords.filter((word) => factWords.includes(word));
+  const tokenizedAnswer = answer.toLowerCase().split(" ");
+  const tokenizedFacts = factArray.map((fact) => fact.toLowerCase().split(" "));
 
-  const relevanceThreshold = 0.1;
-  const relevanceRatio = relevantWords.length / answerWords.length;
+  let maxOverlap = 0;
+  tokenizedFacts.forEach((factTokens) => {
+    let overlap = 0;
+    factTokens.forEach((token) => {
+      if (tokenizedAnswer.includes(token)) {
+        overlap += 1;
+      }
+    });
+    maxOverlap = Math.max(maxOverlap, overlap);
+  });
+
+  const relevanceThreshold = 0.2;
+  const relevanceRatio = maxOverlap / tokenizedAnswer.length;
 
   return relevanceRatio >= relevanceThreshold;
 }
+
+
 
 function removeIncompleteSentence(answer) {
   const sentences = answer.split(". ");
@@ -59,13 +71,18 @@ function getRelevantFacts(answer, factArray) {
     const relevantWords = answerWords.filter((word) => factWords.includes(word));
     const relevanceRatio = relevantWords.length / answerWords.length;
 
-    if (relevanceRatio >= 0.2) {
-      relevantFacts.push(fact);
+    if (relevanceRatio >= 0.15) {
+      const highlightedFact = factWords
+        .map((word) => (relevantWords.includes(word) ? `<b>${word}</b>` : word))
+        .join(" ");
+      relevantFacts.push(highlightedFact);
     }
   });
 
   return relevantFacts.length > 0 ? relevantFacts : [factArray[0]];
 }
+
+
 
 
 
@@ -94,11 +111,10 @@ export default async function handler(req, res) {
     const completeAnswer = removeIncompleteSentence(answer);
     const relevantFacts = getRelevantFacts(completeAnswer, FACT);
     
-    if (answer === "") {
-      res.status(200).json({ answer: "대답할 수 없는 질문입니다." });
-    } else {
-      const relevantFacts = getRelevantFacts(completeAnswer, FACT);
+    if (isAnswerRelevant(completeAnswer, FACT)) {
       res.status(200).json({ answer: completeAnswer, relevantFacts });
+    } else {
+      res.status(200).json({ answer: "주어진 정보로는 대답할 수 없는 질문입니다. 질의응답 페이지에서 실제 사람들에게 질문해보세요." });
     }
   } catch (error) {
     console.error("Error occurred:", error);

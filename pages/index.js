@@ -123,10 +123,10 @@ export default function Home() {
           
           {relevantFacts.length > 0 && (
         <div className="relevant-facts">
-          <h4 className="relevanttitle">관련 정보</h4>
+          <h4 className="relevanttitle">AI가 참고한 정보</h4>
           <ul className="relevanttext">
             {relevantFacts.map((fact, index) => (
-              <li key={index}>{fact}</li>
+              <li dangerouslySetInnerHTML={{ __html: fact }}></li>
             ))}
           </ul>
         </div>

@@ -137,7 +137,7 @@ h6{
   font-size: 14px;
   text-align: left;
   margin-left: 5px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .answertext{
@@ -185,11 +185,11 @@ h5{
   font-size: 10px;
   list-style-type: disc;
   list-style-position: outside;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   border-radius: 10px;
   text-align: center;
   text-align: left;
-  padding:10px;
+  padding:15px;
   padding-left: 30px;
   margin-top: 15px;
 }
@@ -197,6 +197,7 @@ h5{
 .relevanttext li{
   margin-bottom: 5px;
   font-weight: 400;
+  margin: 0px;
 }
 
 .relevanttitle{
@@ -208,4 +209,8 @@ h5{
   text-align: left;
   margin-left: 5px;
   font-weight: 500;
+}
+
+b{
+  color: #e07d3b;
 }
