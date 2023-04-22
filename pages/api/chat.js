@@ -71,16 +71,23 @@ function getRelevantFacts(answer, factArray) {
     const relevantWords = answerWords.filter((word) => factWords.includes(word));
     const relevanceRatio = relevantWords.length / answerWords.length;
 
-    if (relevanceRatio >= 0.15) {
+    if (relevanceRatio >= 0.25) { // Increased the threshold to make the filtering more strict
       const highlightedFact = factWords
         .map((word) => (relevantWords.includes(word) ? `<b>${word}</b>` : word))
         .join(" ");
-      relevantFacts.push(highlightedFact);
+      relevantFacts.push({ text: highlightedFact, count: relevantWords.length });
     }
   });
 
-  return relevantFacts.length > 0 ? relevantFacts : [factArray[0]];
+  // Sort relevantFacts by the number of highlighted keywords in descending order
+  relevantFacts.sort((a, b) => b.count - a.count);
+
+  // Limit the number of returned relevant facts to 5
+  const limitedRelevantFacts = relevantFacts.slice(0, 5).map((fact) => fact.text);
+
+  return limitedRelevantFacts.length > 0 ? limitedRelevantFacts : [factArray[0]];
 }
+
 
 
 
