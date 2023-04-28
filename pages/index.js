@@ -4,6 +4,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import loaderStyles from "../styles/loader.module.css";
 import Navbar from '../components/Navbar';
+import { useRouter } from "next/router"; // 추가: useRouter 불러오기
+import { auth } from "../lib/firebase";
 
 const linkifyAnswer = (answer) => {
   const urlRegex = /https?:\/\/[^\s]+/g;
@@ -58,6 +60,16 @@ export default function Home() {
   //   setLoading(false);
     
   // };
+
+  const router = useRouter();
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (!user) {
+        router.push("/login");
+      }
+    });
+    return () => unsubscribe();
+  }, [auth, router]);
 
   const handleFocus = (e) => {
     e.target.value = "";

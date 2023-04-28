@@ -1,0 +1,34 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .loginButton {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .loginButton:hover {
+    background-color: #3367d6;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .infoText {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  

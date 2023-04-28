@@ -60,6 +60,19 @@
     padding-bottom: 8px;
   }
   
+  .navlogout{
+    height:17px;
+    width: 80px;
+    font-size: 8px;
+    font-weight: 200;
+    background-color: rgb(136, 136, 136);
+  }
+
+  .user{
+    font-size: 8px;
+    font-weight: 500;
+  }
+ 
 
 
   
