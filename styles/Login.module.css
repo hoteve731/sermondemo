@@ -1,34 +1,99 @@
-.loginContainer {
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .mainlogo {
+    font-family: "Calistoga", cursive;
+    font-weight: 400;
+    font-size: min(max(5px, 50px), 60px);
+    background: linear-gradient(to right, #fbd72b, #ff5521);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 0px;
+  }
+
+  .welcome {
+    margin-bottom: 1rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  
+  .googleLogin {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    transition: background-color 0.2s;
+    color: #333;
+  }
+  
+  .googleLogin:hover {
+    border: 1px solid #ddd;
+    background-color: #b8b8b8;
+  }
+  
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(99, 65, 1, 0.3); 
+    padding:15px;
+    
   }
   
-  .loginButton {
-    background-color: #4285f4;
-    color: white;
+  .emailInput,
+  .passwordInput {
+    padding: 10px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .signIn {
+    padding: 10px 20px;
     border: none;
-    font-size: 14px;
-    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #4a90e2;
+    color: #fff;
     cursor: pointer;
-    transition: all 0.3s;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+
+  .signUp {
+    font-size:10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #376ba7;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
   }
   
-  .loginButton:hover {
-    background-color: #3367d6;
+  
+  .signIn:hover,
+  .signUp:hover {
+    background-color: #3c81d8;
   }
   
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  
-  .infoText {
-    margin-top: 8px;
-    font-size: 14px;
+  .signIn {
+    margin-bottom: 10px;
   }
   

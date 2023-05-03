@@ -1,9 +1,8 @@
-// pages/login.js
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../lib/firebase";
-import styles from "../styles/Login.module.css";
+import styles from "../styles/login.module.css";
 
 const Login = () => {
   const [loading, setLoading] = useState(true);
@@ -53,35 +52,42 @@ const Login = () => {
   };
 
   return (
-    <body>
-      <h1 className="mainlogo">ChatGBD</h1>
-      <h3>돌아오신 걸 환영해요!</h3>
+    <div className={styles.container}>
+      <h1 className={styles.mainlogo}>ChatGBD</h1>
+      <h3 className={styles.welcome}>돌아오신 걸 환영해요!</h3>
       {loading ? (
         <div>Loading...</div>
       ) : (
         <div>
-          <button onClick={signInWithGoogle}>Google 로그인</button>
-          <h3>구글 계정이 없다면</h3>
-          <div>
+          <div className={styles.loginForm}>
             <input
+              className={styles.emailInput}
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="이메일"
             />
             <input
+              className={styles.passwordInput}
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="비밀번호"
             />
-            <button onClick={signInWithEmailPassword}>로그인</button>
-            <button onClick={signUpWithEmailPassword}>새로 회원가입&로그인</button>
+            <button className={styles.signIn} onClick={signInWithEmailPassword}>
+              로그인
+            </button>
+            <button className={styles.signUp} onClick={signUpWithEmailPassword}>
+              회원가입
+            </button>
+         
           </div>
+          <button className={styles.googleLogin} onClick={signInWithGoogle}>
+            Google 로그인
+          </button>
         </div>
       )}
-
-    </body>
+    </div>
   );
 };
 
