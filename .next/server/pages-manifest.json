@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/test": "pages/test.js",
-  "/": "pages/index.js",
-  "/qna": "pages/qna.js"
+  "/login": "pages/login.js",
+  "/": "pages/index.js"
 }
