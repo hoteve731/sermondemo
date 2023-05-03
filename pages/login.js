@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../lib/firebase";
-// import styles from "../styles/login.module.css";
+import styles from "../styles/login.module.css";
 
 const Login = () => {
   const [loading, setLoading] = useState(true);
