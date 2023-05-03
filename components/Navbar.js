@@ -42,15 +42,15 @@ const Navbar = () => {
             <span className={`${styles.link} ${isActive('/test')}`}>정보 모두보기</span>
           </Link>
         </li>
-        <li className={styles.li}>
+        {/* <li className={styles.li}>
           <Link href="/qna" passHref>
             <span className={`${styles.link} ${isActive('/qna')}`}>질의응답</span>
           </Link>
-        </li>
+        </li> */}
         {user ? (
           <>
             <li className={styles.li}>
-              <span className={styles.user}>{user.displayName || user.email}</span>
+              <span className={styles.user}>{user.displayName || user.email}님</span>
             </li>
             <li className={styles.li}>
               <button className={styles.navlogout} onClick={handleLogout}>

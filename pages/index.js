@@ -149,11 +149,11 @@ export default function Home() {
         </div>
       )}
       <h6>
-        답변은 부정확할 수 있지만 <br />최대한 검증된 정보들로만 구성되어 있습니다.
+      <br />
+        인공지능이 생성한 답변은 부정확할 수 있습니다. <br />검증된 정보들로만 학습시켜 주세요.
         <br /><br />
         '정보 모두보기'에서 인공지능이 학습한 <br />모든 정보들을 보실 수 있습니다. 
         <br /><br />
-        인공지능이 답변을 하지 못하는 경우,<br /> '질의응답'에서 실제 사람들과 질의응답을 나눠보세요. 
       </h6>
       <br />
       <a href="https://www.notion.so/hoteve731/ChatGBD-b0d57daf9aef422e868b919fd434d2d3?pvs=4" target="_blank" id="help-link"><i class="fas fa-question-circle"></i></a>

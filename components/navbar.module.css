@@ -62,15 +62,21 @@
   
   .navlogout{
     height:17px;
-    width: 80px;
+    width: 55px;
     font-size: 8px;
-    font-weight: 200;
+    font-weight: 500;
     background-color: rgb(136, 136, 136);
+    padding:0px;
   }
 
   .user{
     font-size: 8px;
-    font-weight: 500;
+    font-weight: 700;
+    color: rgb(204, 101, 63);
+    margin: 0px;
+    padding:5px;
+    border-radius: 5px;
+    border: 1px solid orange;
   }
  
 

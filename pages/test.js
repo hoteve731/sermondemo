@@ -5,8 +5,7 @@ import styles from "../styles/TestPage.module.css";
 import Navbar from '../components/Navbar';
 import { useRef } from "react";
 import { collection, limit, query, getDocs, doc, runTransaction, getDoc } from "firebase/firestore";
-
-
+import { auth } from "../lib/firebase";
 
 const TestPage = () => {
   const [allFacts, setAllFacts] = useState([]);
@@ -32,6 +31,17 @@ const TestPage = () => {
     }
   
     const newFact = inputRef.current.value.trim();
+    const currentUser = auth.currentUser; // 로그인한 사용자 정보 가져오기
+
+    if (!currentUser) {
+      // 로그인한 사용자가 없으면 함수를 종료합니다.
+      alert("로그인이 필요합니다.");
+      return;
+    }
+
+    const author = currentUser.email; // 로그인한 사용자의 이메일을 사용
+    const timestamp = new Date().toISOString(); // 현재 시간을 ISO 문자열로 저장
+    
     const docRef = doc(firestore, "Facts", "factList");
     await runTransaction(firestore, async (transaction) => {
       const factListDoc = await getDoc(docRef);
@@ -42,7 +52,13 @@ const TestPage = () => {
   
       const data = factListDoc.data();
       const newKey = `fact${Object.keys(data).length + 1}`;
-      transaction.update(docRef, { [newKey]: newFact });
+      transaction.update(docRef, {
+        [newKey]: {
+          content: newFact,
+          author: author,
+          timestamp: timestamp,
+        },
+      });
     });
   
     handleModalClose();
@@ -59,7 +75,10 @@ const TestPage = () => {
       if (doc) {
         const docData = doc.data();
         const factList = Object.entries(docData).map(([key, value]) => {
-          return { id: key, content: value };
+          const content = typeof value === "string" ? value : value.content;
+          const author = value.author || "unknown";
+          const timestamp = value.timestamp || "unknown";
+          return { id: key, content: content, author: author, timestamp: timestamp };
         });
         setAllFacts(factList);
       }
@@ -125,6 +144,10 @@ const TestPage = () => {
             currentFacts.map((fact) => (
               <li key={fact.id} className={styles.factItem}>
                 <div dangerouslySetInnerHTML={{ __html: linkify(fact.content) }} />
+                <div className={styles.factInfo}>
+                  <span> {fact.author}</span>
+                  <span> {new Date(fact.timestamp).toLocaleString()}</span>
+              </div>
               </li>
             ))
           ) : (
