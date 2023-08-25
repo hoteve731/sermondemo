@@ -40,7 +40,7 @@
   }
   
   .navbar a {
-    color: rgb(202, 98, 0);
+    color: rgb(138, 0, 202);
     text-decoration: none;
     position: relative;
     transition: 0.2s;
@@ -50,13 +50,13 @@
   }
   
   .navbar a:hover {
-    color: rgb(224, 137, 37);
+    color: rgb(100, 62, 150);
  
   }
 
   .navbar span.active {
-    color: rgb(224, 137, 37);
-    border-bottom: 4px solid rgb(224, 137, 37);
+    color: rgb(180, 37, 224);
+    border-bottom: 4px solid rgb(135, 15, 151);
     padding-bottom: 8px;
   }
   

@@ -39,7 +39,7 @@ const Navbar = () => {
         </li>
         <li className={styles.li}>
           <Link href="/test" passHref>
-            <span className={`${styles.link} ${isActive('/test')}`}>정보 모두보기</span>
+            <span className={`${styles.link} ${isActive('/test')}`}>trained text</span>
           </Link>
         </li>
         {/* <li className={styles.li}>
@@ -50,18 +50,18 @@ const Navbar = () => {
         {user ? (
           <>
             <li className={styles.li}>
-              <span className={styles.user}>{user.displayName || user.email}님</span>
+              <span className={styles.user}>{user.displayName || user.email} User</span>
             </li>
             <li className={styles.li}>
               <button className={styles.navlogout} onClick={handleLogout}>
-                로그아웃
+                Sign out
               </button>
             </li>
           </>
         ) : (
           <li className={styles.li}>
             <Link href="/login" passHref>
-              <span className={`${styles.link} ${isActive('/login')}`}>로그인</span>
+              <span className={`${styles.link} ${isActive('/login')}`}>Sign in</span>
             </Link>
           </li>
         )}

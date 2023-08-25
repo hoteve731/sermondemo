@@ -17,33 +17,17 @@ body {
   box-sizing: border-box;
 }
 
-.mainlogo {
-  font-family: "Calistoga", cursive;
-  font-weight: 400;
-  font-size: min(max(10px, 65px), 100px);
-  background: linear-gradient(to right, #fbd72b, #ff5521);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.5s ease-in-out;
-  margin-bottom: 0px;
-}
-
-.mainlogo:hover {
-  animation: bounce 0.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
-}
-
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  position: fixed;
+    bottom: 0;
+    left: 0;  /* ensures the form is left-aligned */
+    right: 0; /* ensures the form is right-aligned */
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    background-color: rgba(255, 255, 255, 0.5);  /* semi-transparent white */
+    backdrop-filter: blur(10px);  /* adds blur effect */
+    z-index: 9999;  /* Adjust this value as necessary to ensure the form stays on top */
 }
 
 label {
@@ -53,19 +37,18 @@ label {
 .maininput {
   padding: 0.5rem;
   font-size: 1rem;
-  border: 2px solid rgb(190, 190, 190);
+  border: 5px solid rgb(190, 190, 190);
   border-radius: 20px;
   outline: none;
   margin: 0 auto;
   padding-left: 20px;
   font-weight: 600;
-  width: 60%;
-  max-width:280px;
+  width: 70%;
   background-color: rgb(255, 255, 255);
 }
 
 .maininput:focus {
-  border-color: #e49938;
+  border-color: #440888;
 }
 
 input{
@@ -77,7 +60,7 @@ input{
 }
 
 button {
-  background-color: #f57017;
+  background-color: #400b7c;
   color: rgb(255, 255, 255);
   font-size: 0.8rem;
   padding: 5px;
@@ -214,4 +197,40 @@ h5{
 
 b{
   color: #e07d3b;
+}
+
+.user{
+  color: white;
+  line-height: 3vw;
+  font-size: 3vw;
+  border-radius: 15px;
+  padding: 10px;
+  order: -1;
+  background-color: #6F5E93;
+  max-width: 75%;
+  width: 50%;
+  align-self: flex-end;
+  order: 1;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.bot{
+  color: rgb(0, 0, 0);
+    line-height: 3vw;
+    font-size: 3vw;
+    border-radius: 15px;
+    padding: 10px;
+    background: #D9D9D9;
+    max-width: 75%;
+    width: 50%;
+    align-self: flex-start;
+    order: 2;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.messages{
+  margin-bottom:100px;
+  margin-top: 50px;
 }
