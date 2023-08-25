@@ -47,7 +47,7 @@ const Navbar = () => {
             <span className={`${styles.link} ${isActive('/qna')}`}>질의응답</span>
           </Link>
         </li> */}
-        {user ? (
+        {/* {user ? (
           <>
             <li className={styles.li}>
               <span className={styles.user}>{user.displayName || user.email} User</span>
@@ -64,7 +64,7 @@ const Navbar = () => {
               <span className={`${styles.link} ${isActive('/login')}`}>Sign in</span>
             </Link>
           </li>
-        )}
+        )} */}
       </ul>
     </nav>
   );

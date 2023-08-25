@@ -20,15 +20,15 @@ export default function Home() {
   ]);
   const [pastMessages, setPastMessages] = useState([]);
 
-  const router = useRouter();
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (!user) {
-        router.push("/login");
-      }
-    });
-    return () => unsubscribe();
-  }, [auth, router]);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     if (!user) {
+  //       router.push("/login");
+  //     }
+  //   });
+  //   return () => unsubscribe();
+  // }, [auth, router]);
 
   const handleFocus = (e) => {
     e.target.value = "";
@@ -85,7 +85,9 @@ export default function Home() {
         </Head>
 
        
-        
+        <button onClick={() => location.reload()}>Clear</button>
+
+
 
         <div className="messages">
           {messages.map((message, index) => (
