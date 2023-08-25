@@ -1,12 +1,14 @@
 .loader {
-    border: 5px solid #f3f3f3;
+    border: 10px solid #b9b9b9;
     border-radius: 50%;
     width: 25px;
     height: 25px;
     animation: spin 2s linear infinite;
-    margin: 0 auto;
-    margin-top: 0px;
-    position: relative;
+    position: fixed;      /* Change from relative to fixed */
+    top: 50%;             /* Center vertically */
+    left: 50%;            /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    z-index: 1000;     
   }
   
   @keyframes spin {
@@ -25,6 +27,6 @@
     height: 10px;
     margin: 2px;
     border-radius: 50%;
-    background-color: #db7134;
-    background: linear-gradient(to right, #fbd72b, #ff5521);
+    background-color: #6d0f65;
+    background: linear-gradient(to right, #ec88ec, #32056e);
   } 

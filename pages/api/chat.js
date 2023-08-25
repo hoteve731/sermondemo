@@ -155,7 +155,7 @@ export default async function handler(req, res) {
     const response = await openai.post("/chat/completions", {
       model: "gpt-3.5-turbo",
       messages: messages,
-      temperature: 0.2,
+      temperature: 0,
       max_tokens: 200,
     });
 

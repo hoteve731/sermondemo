@@ -36,7 +36,13 @@ const Navbar = () => {
           <Link href="/" passHref>
             <span className={`${styles.link} ${isActive('/')}`}>Home</span>
           </Link>
+      
         </li>
+
+        <li className={styles.li}>
+          <button onClick={() => location.reload()}>Clear</button>
+        </li>
+        
         <li className={styles.li}>
           <Link href="/test" passHref>
             <span className={`${styles.link} ${isActive('/test')}`}>trained text</span>
