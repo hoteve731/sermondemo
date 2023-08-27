@@ -101,7 +101,7 @@ function getRelevantFacts(answer, factArray) {
 
 
 export default async function handler(req, res) {
-  const { question, pastMessages } = req.body;
+  const { question } = req.body;
 
   if (!question) {
     res.status(400).json({ error: "No question provided." });
@@ -147,9 +147,9 @@ export default async function handler(req, res) {
        
       ]
       ` },
-      ...pastMessages.map(msg => ({ role: msg.sender === 'user' ? 'user' : 'assistant', content: msg.text })),
       { role: "user", content: question },
     ];
+
     
 
     const response = await openai.post("/chat/completions", {

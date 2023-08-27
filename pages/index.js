@@ -18,7 +18,7 @@ export default function Home() {
   const [messages, setMessages] = useState([
     { text: "Welcome to Whisper. Ask anything.", sender: "bot" }
   ]);
-  const [pastMessages, setPastMessages] = useState([]);
+
 
   // const router = useRouter();
   // useEffect(() => {
@@ -47,22 +47,12 @@ export default function Home() {
     try {
       const userMessage = { text: question, sender: "user" };
       setMessages((prevMessages) => [...prevMessages, userMessage]);
-      setPastMessages((pastMessages) => [...pastMessages, userMessage]); // Update past messages
 
-      const response = await axios.post("/api/chat", { question, pastMessages }); // Include past messages in the request
+      const response = await axios.post("/api/chat", { question }); // Simplified request payload
 
       const botMessage = { text: response.data.answer, sender: "bot" };
       setMessages((prevMessages) => [...prevMessages, botMessage]);
-  
-      
-      // if (response.data.relevantFacts && response.data.relevantFacts.length > 0) {
-      //   const factMessage = { text: "Relevant Facts:\n" + response.data.relevantFacts.join("\n"), sender: "bot" };
-      //   setMessages((prevMessages) => [...prevMessages, factMessage]);
-      // } else {
-      //   const noRelevantFactsMessage = { text: "There is no relevant information in current database", sender: "bot" };
-      //   setMessages((prevMessages) => [...prevMessages, noRelevantFactsMessage]);
-      // }
-  
+
       setQuestion("");
     } catch (error) {
       console.error("Error occurred:", error);
