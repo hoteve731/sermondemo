@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     z-index: 9999;
-    height: 35px;
+    height: 70px;
     font-size: 14px;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
   }
   
   .navbar a {
-    color: rgb(138, 0, 202);
+    color: rgb(37, 4, 99);
     text-decoration: none;
     position: relative;
     transition: 0.2s;
@@ -50,13 +50,13 @@
   }
   
   .navbar a:hover {
-    color: rgb(100, 62, 150);
+    color: rgb(37, 4, 99);
  
   }
 
   .navbar span.active {
-    color: rgb(180, 37, 224);
-    border-bottom: 4px solid rgb(135, 15, 151);
+    color: rgb(37, 4, 99);
+    border-bottom: 6px solid rgb(37, 4, 99);
     padding-bottom: 8px;
   }
   
@@ -79,7 +79,5 @@
     border: 1px solid orange;
   }
  
-
-
   
   

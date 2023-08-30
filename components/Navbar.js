@@ -32,6 +32,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul>
+       
         <li className={styles.li}>
           <Link href="/" passHref>
             <span className={`${styles.link} ${isActive('/')}`}>Home</span>
@@ -39,14 +40,16 @@ const Navbar = () => {
       
         </li>
 
+        <img src = "/logo.png" alt='SVRlogo' width="140" height="55" />
+
         <li className={styles.li}>
           <button onClick={() => location.reload()}>Clear</button>
         </li>
         
         <li className={styles.li}>
-          <Link href="/test" passHref>
+          {/* <Link href="/test" passHref>
             <span className={`${styles.link} ${isActive('/test')}`}>trained text</span>
-          </Link>
+          </Link> */}
         </li>
         {/* <li className={styles.li}>
           <Link href="/qna" passHref>

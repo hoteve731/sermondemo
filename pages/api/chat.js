@@ -54,7 +54,7 @@ function isAnswerFromSermon(answer, sermons) {
       }
     }
     const relevanceRatio = overlap / tokenizedAnswer.length;
-    if (relevanceRatio >= 0.75) return true;  // The threshold can be adjusted as needed
+    if (relevanceRatio >= 0.5) return true;  // The threshold can be adjusted as needed
   }
 
   return false;
